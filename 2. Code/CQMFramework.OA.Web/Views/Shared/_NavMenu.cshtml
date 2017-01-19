@@ -1,0 +1,27 @@
+﻿@using CQMFramework.OA.ServiceContract.Models
+@{
+    List<PageGroupModel> pageGroups = ViewBag.PageGroups;
+}
+@if (pageGroups != null)
+{
+    <div class="navbar navbar-default menu-content">
+        <div class="navbar-collapse collapse container">
+            <ul class="nav navbar-nav">
+                @foreach (var g in pageGroups)
+                {
+                    <li class="dropdown">
+                        <a href="@Url.Action(g.DefaultPage.Action,g.DefaultPage.Controller)" class="dropdown-toggle" data-toggle="dropdown">
+                            @g.Name<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            @foreach (var p in g.Pages)
+                            {
+                                <li>@Html.ActionLink(p.Name, p.Action, p.Controller)</li>
+                            }
+                        </ul>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+}
