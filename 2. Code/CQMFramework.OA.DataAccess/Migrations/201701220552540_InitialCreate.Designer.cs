@@ -13,7 +13,7 @@ namespace CQMFramework.OA.DataAccess.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201701100858228_InitialCreate"; }
+            get { return "201701220552540_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

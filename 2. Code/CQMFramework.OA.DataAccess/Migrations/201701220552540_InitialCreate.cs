@@ -44,6 +44,20 @@ namespace CQMFramework.OA.DataAccess.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Projects",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(maxLength: 20, storeType: "nvarchar"),
+                        StartDate = c.DateTime(precision: 0),
+                        EndDate = c.DateTime(precision: 0),
+                        Status = c.Short(nullable: false),
+                        Cooperator = c.String(maxLength: 20, storeType: "nvarchar"),
+                        Remark = c.String(maxLength: 1024, storeType: "nvarchar"),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.Roles",
                 c => new
                     {
@@ -128,6 +142,7 @@ namespace CQMFramework.OA.DataAccess.Migrations
             DropTable("dbo.Users");
             DropTable("dbo.UserGroups");
             DropTable("dbo.Roles");
+            DropTable("dbo.Projects");
             DropTable("dbo.Permissions");
             DropTable("dbo.Pages");
             DropTable("dbo.PageGroups");
