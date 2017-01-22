@@ -178,7 +178,7 @@
     <Content Include="Images\logo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Properties\PublishProfiles\aliyun.pubxml" />
+    <None Include="Properties\PublishProfiles\aliyun-oa-web.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -259,8 +259,7 @@
           <IISUrl>http://localhost/cqmframework-oa-web</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl>http://120.77.251.69/cqmframework-oa-web/</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
